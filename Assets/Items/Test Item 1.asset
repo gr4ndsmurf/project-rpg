@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ae7bf822a29e2243a5d79db514e5844, type: 3}
-  m_Name: Test Item
+  m_Name: Test Item 1
   m_EditorClassIdentifier: 
-  name: Helmet of Protection
-  icon: {fileID: 0}
+  name: Armor of Zowrak
+  icon: {fileID: 21300000, guid: d659f7396cd57754eba78763cf986c51, type: 3}
   isDefaultItem: 0
