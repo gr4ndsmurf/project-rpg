@@ -19,4 +19,4 @@ public class EquipmentSO : ItemSO
     }
 }
 
-public enum EquipmentSlot { Head, Chest, Legs, Weapon, Shield, Feet }
+public enum EquipmentSlot { Head, Chest, Legs, Weapon, Shield, Feet, Gauntlets, Cape }

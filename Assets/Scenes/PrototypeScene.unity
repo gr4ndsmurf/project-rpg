@@ -9541,7 +9541,9 @@ MonoBehaviour:
   defaultItems:
   - {fileID: 11400000, guid: f4ebb40cc3d819847b616b36c5dac630, type: 2}
   - {fileID: 11400000, guid: 1ce69468edcd64441b516a97d2728dce, type: 2}
+  - {fileID: 11400000, guid: f50628fbafc1f924a9c7da187efac49d, type: 2}
   - {fileID: 11400000, guid: 761493acee3109a4e830657e578851ac, type: 2}
+  - {fileID: 11400000, guid: 077dda6857448b14c941dbf5d305229c, type: 2}
   targetMesh: {fileID: 2667932143391793007}
 --- !u!1001 &599301015
 PrefabInstance:
