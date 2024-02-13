@@ -78,6 +78,9 @@ public class EquipmentManager : MonoBehaviour
                 onEquipmentChanged.Invoke(null, oldItem);
             }
 
+            // Equipment UI'da kaldýrma kýsmý
+            equipSlots[slotIndex].RemoveSlot();
+
             return oldItem;
         }
 

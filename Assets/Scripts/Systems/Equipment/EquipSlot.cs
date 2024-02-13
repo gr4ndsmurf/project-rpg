@@ -12,8 +12,26 @@ public class EquipSlot : MonoBehaviour
     {
         item = newItem;
 
-        icon.sprite = item.icon;
-        icon.enabled = true;
-        removeButton.interactable = true;
+        if (!item.isDefaultItem)
+        {
+            icon.sprite = item.icon;
+            icon.enabled = true;
+            removeButton.interactable = true;
+        }
+        else
+        {
+            item = null;
+            icon.sprite = null;
+            icon.enabled = false;
+            removeButton.interactable = false;
+        }
+    }
+
+    public void RemoveSlot()
+    {
+        item = null;
+        icon.sprite = null;
+        icon.enabled = false;
+        removeButton.interactable = false;
     }
 }
