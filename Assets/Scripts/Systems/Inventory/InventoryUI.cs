@@ -4,6 +4,7 @@ public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private Transform itemsParent;
     [SerializeField] private GameObject inventoryUI;
+    [SerializeField] private GameObject equipmentUI;
 
     Inventory Inventory;
 
@@ -22,6 +23,7 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
+            equipmentUI.SetActive(!equipmentUI.activeSelf);
         }
     }
 
