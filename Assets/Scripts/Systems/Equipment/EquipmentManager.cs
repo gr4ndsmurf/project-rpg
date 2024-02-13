@@ -19,6 +19,7 @@ public class EquipmentManager : MonoBehaviour
 
     public SkinnedMeshRenderer targetMesh;
     EquipmentSO[] currentEquipment;
+    public EquipSlot[] equipSlots;
     SkinnedMeshRenderer[] currentMeshes;
 
     public delegate void OnEquipmentChanged(EquipmentSO newItem, EquipmentSO oldItem);
@@ -53,6 +54,9 @@ public class EquipmentManager : MonoBehaviour
         newMesh.bones = targetMesh.bones;
         newMesh.rootBone = targetMesh.rootBone;
         currentMeshes[slotIndex] = newMesh;
+
+        // Equipment UI'da görünme kýsmý
+        equipSlots[slotIndex].AddSlot(newItem);
     }
 
     public EquipmentSO Unequip (int slotIndex)
