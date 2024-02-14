@@ -8,7 +8,7 @@ public class EquipmentSO : ItemSO
     public EquipmentSlot equipSlot;
     public SkinnedMeshRenderer mesh;
 
-    public int armorModifier;
+    public int defenseModifier;
     public int damageModifier;
 
     public override void Use()
