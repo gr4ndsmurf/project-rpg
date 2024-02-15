@@ -3960,7 +3960,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 688748315}
   equipmentUI: {fileID: 1492084148}
-  playerStats: {fileID: 395720770}
   defense_Text: {fileID: 1552599558}
   damage_Text: {fileID: 1606067537}
 --- !u!1 &220477129
@@ -3978,6 +3977,7 @@ GameObject:
   - component: {fileID: 220477130}
   - component: {fileID: 220477136}
   - component: {fileID: 220477135}
+  - component: {fileID: 220477137}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -4102,7 +4102,7 @@ MonoBehaviour:
   damage:
     baseValue: 5
   defense:
-    baseValue: 3
+    baseValue: 1
 --- !u!114 &220477136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4117,6 +4117,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 4
   interactionTransform: {fileID: 220477134}
+--- !u!114 &220477137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220477129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbe457342676e74bab91b526ba28ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
 --- !u!1001 &221526232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7263,6 +7276,7 @@ GameObject:
   - component: {fileID: 395720768}
   - component: {fileID: 395720769}
   - component: {fileID: 395720770}
+  - component: {fileID: 395720771}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7413,9 +7427,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 0
+--- !u!114 &395720771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395720762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbe457342676e74bab91b526ba28ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
 --- !u!1001 &402875539
 PrefabInstance:
   m_ObjectHideFlags: 0

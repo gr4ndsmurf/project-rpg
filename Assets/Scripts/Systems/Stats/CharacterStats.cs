@@ -16,12 +16,7 @@ public class CharacterStats : MonoBehaviour
 
     private void Update()
     {
-        // TEST TAKEDAMAGE
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(damage.GetValue());
-            Debug.Log("Current Health= " + currentHealth);
-        }
+
     }
 
     public void TakeDamage(int damage)
