@@ -18,6 +18,7 @@ public class EquipmentManager : MonoBehaviour
     public EquipmentSO[] defaultItems;
 
     public SkinnedMeshRenderer targetMesh;
+    public Transform weaponsTargetBone;
     EquipmentSO[] currentEquipment;
     public EquipSlot[] equipSlots;
     SkinnedMeshRenderer[] currentMeshes;
@@ -48,11 +49,18 @@ public class EquipmentManager : MonoBehaviour
         }
 
         currentEquipment[slotIndex] = newItem;
+
         SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
         newMesh.transform.parent = targetMesh.transform;
-
+        if (newItem.equipSlot == EquipmentSlot.Weapon)
+        {
+            newMesh.rootBone = weaponsTargetBone;
+        }
+        else
+        {
+            newMesh.rootBone = targetMesh.rootBone;
+        }
         newMesh.bones = targetMesh.bones;
-        newMesh.rootBone = targetMesh.rootBone;
         currentMeshes[slotIndex] = newMesh;
 
         // Equipment UI'da görünme kýsmý

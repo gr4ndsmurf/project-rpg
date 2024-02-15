@@ -9,6 +9,13 @@ public class CharacterCombat : MonoBehaviour
     [SerializeField] private float attackDelay = 0.6f;
     private float attackCooldown = 0f;
 
+    // For Animations
+    public bool InCombat { get; private set; }
+    const float combatCooldown = 5f;
+    float lastAttackTime;
+
+    public event System.Action OnAttack;
+
     CharacterStats myStats;
 
     private void Start()
@@ -19,6 +26,11 @@ public class CharacterCombat : MonoBehaviour
     private void Update()
     {
         attackCooldown -= Time.deltaTime;
+
+        if (Time.time - lastAttackTime > combatCooldown)
+        {
+            InCombat = false;
+        }
     }
 
     public void Attack(CharacterStats targetStats)
@@ -26,7 +38,13 @@ public class CharacterCombat : MonoBehaviour
         if (attackCooldown <= 0)
         {
             StartCoroutine(DoDamage(targetStats, attackDelay));
+            if (OnAttack != null)
+            {
+                OnAttack();
+            }
             attackCooldown = 1f / attackSpeed;
+            InCombat = true;
+            lastAttackTime = Time.time;
         }
     }
 
@@ -35,5 +53,9 @@ public class CharacterCombat : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         stats.TakeDamage(myStats.damage.GetValue());
+        if (stats.currentHealth <= 0)
+        {
+            InCombat = false;
+        }
     }
 }
