@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterStats))]
@@ -17,6 +18,7 @@ public class CharacterCombat : MonoBehaviour
     public event System.Action OnAttack;
 
     CharacterStats myStats;
+    CharacterStats opponentStats;
 
     private void Start()
     {
@@ -37,7 +39,7 @@ public class CharacterCombat : MonoBehaviour
     {
         if (attackCooldown <= 0)
         {
-            StartCoroutine(DoDamage(targetStats, attackDelay));
+            opponentStats = targetStats;
             if (OnAttack != null)
             {
                 OnAttack();
@@ -48,12 +50,11 @@ public class CharacterCombat : MonoBehaviour
         }
     }
 
-    IEnumerator DoDamage(CharacterStats stats, float delay)
-    {
-        yield return new WaitForSeconds(delay);
 
-        stats.TakeDamage(myStats.damage.GetValue());
-        if (stats.currentHealth <= 0)
+    public void AttackHit_AnimationEvent()
+    {
+        opponentStats.TakeDamage(myStats.damage.GetValue());
+        if (opponentStats.currentHealth <= 0)
         {
             InCombat = false;
         }
