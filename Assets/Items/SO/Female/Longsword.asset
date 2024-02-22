@@ -18,4 +18,4 @@ MonoBehaviour:
   equipSlot: 3
   mesh: {fileID: 2194537664735154046, guid: 81d6852fba75ef24f8d15a9e85fb8c5a, type: 3}
   defenseModifier: 0
-  damageModifier: 10
+  damageModifier: 1

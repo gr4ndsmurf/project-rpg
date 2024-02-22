@@ -40,6 +40,6 @@ public class CharacterAnimator : MonoBehaviour
     {
         animator.SetTrigger("attack");
         int attackIndex = Random.Range(0, currentAttackAnimSet.Length);
-        overrideController["Default_Punch"] = currentAttackAnimSet[attackIndex];
+        overrideController["Female_Punching"] = currentAttackAnimSet[attackIndex];
     }
 }
