@@ -18,6 +18,8 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
 
+    public bool canMove = true;
+    public bool canAttack = true;
     public void KillPlayer()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

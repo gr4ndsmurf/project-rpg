@@ -15,11 +15,13 @@ public class CharacterAnimator : MonoBehaviour
     protected CharacterCombat combat;
     public AnimatorOverrideController overrideController;
 
+
     protected virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         combat = GetComponent<CharacterCombat>();
+        
 
         if (overrideController == null)
         {
@@ -29,6 +31,7 @@ public class CharacterAnimator : MonoBehaviour
 
         currentAttackAnimSet = defaultAttackAnimSet;
         combat.OnAttack += OnAttack;
+        
     }
 
     protected virtual void Update()
@@ -45,4 +48,6 @@ public class CharacterAnimator : MonoBehaviour
         int attackIndex = Random.Range(0, currentAttackAnimSet.Length);
         overrideController["Female_Punching"] = currentAttackAnimSet[attackIndex];
     }
+
+    
 }

@@ -15902,6 +15902,11 @@ PrefabInstance:
       propertyPath: randomSeed
       value: -12089418
       objectReference: {fileID: 0}
+    - target: {fileID: 199910640810488414, guid: 0d418d39d811ace4895bcbd985fd909f,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24044,6 +24049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combat: {fileID: 1287594208}
+  abilityRunner: {fileID: 0}
 --- !u!95 &671223337
 Animator:
   serializedVersion: 5
@@ -40586,7 +40592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4dc051a0301cecb4aa1a85036ace2a58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9895f5f95566ceb47bb239149d90cb44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48577,7 +48583,7 @@ MonoBehaviour:
   zoomSpeed: 4
   minZoom: 3
   maxZoom: 15
-  yawSpeed: 100
+  yawSpeed: 150
 --- !u!1001 &1265575099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49415,7 +49421,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 0.4
-  attackDelay: 0.6
 --- !u!114 &1287594209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49430,7 +49435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   damage:
-    baseValue: 10
+    baseValue: 15
   defense:
     baseValue: 0
 --- !u!114 &1287594210
@@ -55053,7 +55058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cf6478ef684ce7f4c830edba147c7607, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4dc051a0301cecb4aa1a85036ace2a58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -59006,6 +59011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combat: {fileID: 2126506992}
+  abilityRunner: {fileID: 2126507001}
 --- !u!95 &1549844149
 Animator:
   serializedVersion: 5
@@ -60641,6 +60647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: randomSeed
       value: -1644972098
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158214575831852, guid: 7be6312967053e94692000c19fd00461,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -64588,6 +64599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2126506990}
+  canMove: 1
+  canAttack: 1
 --- !u!114 &1699711883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80805,6 +80818,8 @@ GameObject:
   - component: {fileID: 2126506992}
   - component: {fileID: 2126506994}
   - component: {fileID: 2126506993}
+  - component: {fileID: 2126507002}
+  - component: {fileID: 2126507001}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -80841,7 +80856,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 1
-  attackDelay: 0.6
 --- !u!114 &2126506993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80995,6 +81009,31 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2126507001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126506990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d2ac6be8f9bdc4a8eb52d25b2b073b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
+--- !u!114 &2126507002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126506990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f184515af69f34aa7788048f95223f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2127148432
 PrefabInstance:
   m_ObjectHideFlags: 0

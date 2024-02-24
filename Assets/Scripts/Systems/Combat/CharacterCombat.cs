@@ -7,7 +7,6 @@ using UnityEngine;
 public class CharacterCombat : MonoBehaviour
 {
     [SerializeField] private float attackSpeed = 1f;
-    [SerializeField] private float attackDelay = 0.6f;
     private float attackCooldown = 0f;
 
     // For Animations

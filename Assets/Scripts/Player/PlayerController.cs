@@ -24,14 +24,17 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100, movementMask))
+            if (PlayerManager.instance.canMove)
             {
-                motor.MoveToPoint(hit.point);
+                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
 
-                RemoveFocus();
+                if (Physics.Raycast(ray, out hit, 100, movementMask))
+                {
+                    motor.MoveToPoint(hit.point);
+
+                    RemoveFocus();
+                }
             }
         }
 

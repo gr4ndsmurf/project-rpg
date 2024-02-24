@@ -17,9 +17,24 @@ public class Enemy : Interactable
     {
         base.Interact();
         CharacterCombat playerCombat = playerManager.player.GetComponent<CharacterCombat>();
+        AbilityRunner abilityRunner = playerManager.player.GetComponent<AbilityRunner>();
+        Animator playerAnimator = playerManager.player.GetComponentInChildren<Animator>();
+
         if (playerCombat != null)
         {
-            playerCombat.Attack(enemyStats);
+            if (abilityRunner.CurrentAbility == null)
+            {
+                playerCombat.Attack(enemyStats);
+            }
+            else
+            {
+                if (playerManager.canAttack)
+                {
+                    abilityRunner.CurrentAbility.Use(enemyStats, playerAnimator);
+                    playerManager.canMove = false;
+                    playerManager.canAttack = false;
+                }
+            }
         }
     }
 }
