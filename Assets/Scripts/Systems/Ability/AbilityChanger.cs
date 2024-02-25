@@ -9,10 +9,12 @@ public class AbilityChanger : MonoBehaviour
     private AbilityRunner m_abilityRunner;
 
     [SerializeField] private Color32 selectedAbilityColor;
+    public ParticleSystem selectedAbilityPS;
 
     [SerializeField] private Image SkillQFrameIMG;
     [SerializeField] private Image SkillQIMG;
     [SerializeField] private TextMeshProUGUI SkillQCooldownTEXT;
+    [SerializeField] private ParticleSystem SqillQps;
 
     SmashAbility smashAbility;
     private void Awake()
@@ -34,6 +36,7 @@ public class AbilityChanger : MonoBehaviour
         {
             m_abilityRunner.CurrentAbility = smashAbility;
             SkillQFrameIMG.color = selectedAbilityColor;
+            selectedAbilityPS = SqillQps;
         }
         else if (Input.GetKeyDown(KeyCode.Q) && currentAbility is SmashAbility)
         {
@@ -42,6 +45,7 @@ public class AbilityChanger : MonoBehaviour
         else if (currentAbility is null)
         {
             SkillQFrameIMG.color = Color.white;
+            selectedAbilityPS = null;
         }
 
 

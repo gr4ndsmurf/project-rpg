@@ -19,8 +19,9 @@ public class SmashAbility : IAbility
         isAbilityCooldown = true;
     }
 
-    public void AbilityHit_AnimationEvent()
+    public void AbilityHit_AnimationEvent(ParticleSystem ps)
     {
         opponentStats.TakeDamage(abilityDamage);
+        ps.Play();
     }
 }
