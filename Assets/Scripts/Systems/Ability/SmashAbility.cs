@@ -23,5 +23,6 @@ public class SmashAbility : IAbility
     {
         opponentStats.TakeDamage(abilityDamage);
         ps.Play();
+        CameraShake.Shake(1f, 1f);
     }
 }
