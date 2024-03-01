@@ -4,19 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+[RequireComponent(typeof(AbilityRunner))]
 public class AbilityChanger : MonoBehaviour
 {
     private AbilityRunner m_abilityRunner;
 
-    [SerializeField] private Color32 selectedAbilityColor;
-    public ParticleSystem selectedAbilityPS;
-
-    [SerializeField] private Image SkillQFrameIMG;
-    [SerializeField] private Image SkillQIMG;
-    [SerializeField] private TextMeshProUGUI SkillQCooldownTEXT;
-    [SerializeField] private ParticleSystem SqillQps;
-
-    SmashAbility smashAbility;
+    public SmashAbility smashAbility;
+    public SpinAttackAbility spinAttackAbility;
+    public FireballAbility fireballAbility;
     private void Awake()
     {
         m_abilityRunner = GetComponent<AbilityRunner>();
@@ -26,6 +21,8 @@ public class AbilityChanger : MonoBehaviour
     {
         m_abilityRunner.CurrentAbility = null;
         smashAbility = new SmashAbility();
+        spinAttackAbility = new SpinAttackAbility();
+        fireballAbility = new FireballAbility();
     }
 
     private void Update()
@@ -35,42 +32,28 @@ public class AbilityChanger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && currentAbility is not SmashAbility && !smashAbility.isAbilityCooldown)
         {
             m_abilityRunner.CurrentAbility = smashAbility;
-            SkillQFrameIMG.color = selectedAbilityColor;
-            selectedAbilityPS = SqillQps;
         }
         else if (Input.GetKeyDown(KeyCode.Q) && currentAbility is SmashAbility)
         {
             m_abilityRunner.CurrentAbility = null;
         }
-        else if (currentAbility is null)
+        else if (Input.GetKeyDown(KeyCode.W) && currentAbility is not SpinAttackAbility && !spinAttackAbility.isAbilityCooldown)
         {
-            SkillQFrameIMG.color = Color.white;
-            selectedAbilityPS = null;
+            m_abilityRunner.CurrentAbility = spinAttackAbility;
+        }
+        else if (Input.GetKeyDown(KeyCode.W) && currentAbility is SpinAttackAbility)
+        {
+            m_abilityRunner.CurrentAbility = null;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && currentAbility is not FireballAbility && !fireballAbility.isAbilityCooldown)
+        {
+            m_abilityRunner.CurrentAbility = fireballAbility;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && currentAbility is FireballAbility)
+        {
+            m_abilityRunner.CurrentAbility = null;
         }
 
-
-        SkillQTimer();
     }
 
-    void SkillQTimer()
-    {
-        if (smashAbility.isAbilityCooldown)
-        {
-            smashAbility.currentCooldown -= Time.deltaTime;
-
-            int cooldownText = (int) smashAbility.currentCooldown;
-            SkillQCooldownTEXT.gameObject.SetActive(true);
-            SkillQCooldownTEXT.text = cooldownText.ToString();
-            SkillQIMG.color = Color.black;
-
-            if (smashAbility.currentCooldown <= 0f)
-            {
-                smashAbility.currentCooldown = smashAbility.maxCooldown;
-
-                smashAbility.isAbilityCooldown = false;
-                SkillQCooldownTEXT.gameObject.SetActive(false);
-                SkillQIMG.color = Color.white;
-            }
-        }
-    }
 }

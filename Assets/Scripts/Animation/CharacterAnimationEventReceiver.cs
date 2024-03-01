@@ -7,7 +7,6 @@ public class CharacterAnimationEventReceiver : MonoBehaviour
 {
     [SerializeField] private CharacterCombat combat;
     [SerializeField] private AbilityRunner abilityRunner;
-    [SerializeField] private AbilityChanger abilityChanger;
 
     private void Start()
     {
@@ -21,7 +20,7 @@ public class CharacterAnimationEventReceiver : MonoBehaviour
 
     public void AbilityHitEvent()
     {
-        abilityRunner.CurrentAbility.AbilityHit_AnimationEvent(abilityChanger.selectedAbilityPS);
+        abilityRunner.CurrentAbility.AbilityHit_AnimationEvent(abilityRunner.selectedAbilityPS);
     }
 
     public void ControlPlayer()
