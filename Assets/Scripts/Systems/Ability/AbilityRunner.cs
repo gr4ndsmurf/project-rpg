@@ -14,6 +14,7 @@ public class AbilityRunner : MonoBehaviour
     private AbilityChanger abilityChanger;
     [SerializeField] private Color32 selectedAbilityColor;
     public ParticleSystem selectedAbilityPS;
+    public float abilityRadius;
 
     [SerializeField] private Image SkillQFrameIMG;
     [SerializeField] private Image SkillQIMG;
@@ -41,22 +42,26 @@ public class AbilityRunner : MonoBehaviour
             ClearCurrentAbility();
             SkillQFrameIMG.color = selectedAbilityColor;
             selectedAbilityPS = SqillQps;
+            abilityRadius = 5f;
         }
         else if (m_currentAbility == abilityChanger.spinAttackAbility)
         {
             ClearCurrentAbility();
             SkillWFrameIMG.color = selectedAbilityColor;
             selectedAbilityPS = SqillWps;
+            abilityRadius = 1.5f;
         }
         else if (m_currentAbility == abilityChanger.fireballAbility)
         {
             ClearCurrentAbility();
             SkillEFrameIMG.color = selectedAbilityColor;
             selectedAbilityPS = SqillEps;
+            abilityRadius = 10f;
         }
         else if (m_currentAbility is null)
         {
             ClearCurrentAbility();
+            abilityRadius = 1.5f;
         }
 
         SkillQTimer();

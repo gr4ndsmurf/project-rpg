@@ -13,6 +13,7 @@ public class Enemy : Interactable
         playerManager = PlayerManager.instance;
         enemyStats = GetComponent<CharacterStats>();
     }
+
     public override void Interact()
     {
         base.Interact();
