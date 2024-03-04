@@ -73616,6 +73616,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8697444218864745541, guid: 37aa8537df62c85458b8ac28857c96bd,
+        type: 3}
+      propertyPath: clickEffect
+      value: 
+      objectReference: {fileID: 440217052206887019, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
     - target: {fileID: 9200532866735563656, guid: 37aa8537df62c85458b8ac28857c96bd,
         type: 3}
       propertyPath: cam
