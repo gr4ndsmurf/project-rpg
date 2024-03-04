@@ -22,6 +22,6 @@ public class PlayerManager : MonoBehaviour
     public bool canAttack = true;
     public void KillPlayer()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GetComponent<MenuManager>().OpenRetryScene();
     }
 }

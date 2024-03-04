@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boots
   m_EditorClassIdentifier: 
   name: Boots
-  icon: {fileID: 21300000, guid: d659f7396cd57754eba78763cf986c51, type: 3}
+  icon: {fileID: 21300000, guid: e89ca016d404a6a4687a5ee741e2d2b5, type: 3}
   isDefaultItem: 0
   equipSlot: 5
   mesh: {fileID: 854085021470941305, guid: 3dd49b04c77e02e448eca59d2ad28bca, type: 3}

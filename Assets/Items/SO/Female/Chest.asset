@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chest
   m_EditorClassIdentifier: 
   name: Chest
-  icon: {fileID: 21300000, guid: d659f7396cd57754eba78763cf986c51, type: 3}
+  icon: {fileID: 21300000, guid: c720139856ac0f44d894498956e1b55f, type: 3}
   isDefaultItem: 0
   equipSlot: 1
   mesh: {fileID: 6302839396472966379, guid: 41f5c801c1280114db28abc36f970659, type: 3}

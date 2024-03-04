@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Longsword
   m_EditorClassIdentifier: 
   name: Longsword
-  icon: {fileID: 21300000, guid: 719c2201c2f5f6c4aafffaeb5abdf5f9, type: 3}
+  icon: {fileID: 21300000, guid: da3489a989b315644b2918cb9df15709, type: 3}
   isDefaultItem: 0
   equipSlot: 3
   mesh: {fileID: 2194537664735154046, guid: 81d6852fba75ef24f8d15a9e85fb8c5a, type: 3}

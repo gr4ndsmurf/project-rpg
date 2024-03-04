@@ -2745,7 +2745,7 @@ GameObject:
   - component: {fileID: 96168148}
   - component: {fileID: 96168147}
   m_Layer: 5
-  m_Name: Skill_IMG
+  m_Name: Pot_IMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,7 +2790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 108ca3e7dda90d945b0914bf9259ec94, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02965bb096d1ff24897cfbedbc22f1a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13989,7 +13989,7 @@ GameObject:
   - component: {fileID: 431329732}
   - component: {fileID: 431329731}
   m_Layer: 5
-  m_Name: SkillKey_IMG
+  m_Name: PotKey_IMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15478,7 +15478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c51afa706b02a044694b30f33f81d239, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a943077fe1913d349a50a7d8dec25b2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21784,7 +21784,7 @@ GameObject:
   - component: {fileID: 684973905}
   - component: {fileID: 684973904}
   m_Layer: 5
-  m_Name: Skill_KeyCode
+  m_Name: Pot_KeyCode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33063,7 +33063,7 @@ GameObject:
   - component: {fileID: 986583001}
   - component: {fileID: 986583000}
   m_Layer: 5
-  m_Name: Skill_IMG
+  m_Name: POT_IMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33108,7 +33108,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9895f5f95566ceb47bb239149d90cb44, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e8b35477a7fb5a46870c1973a523722, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -44032,7 +44032,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f507f03eb80bcbf49bb458bd6a54bd9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a764dfb4b48d0cf4aa099992bb9b7e08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -45871,7 +45871,7 @@ GameObject:
   - component: {fileID: 1329692243}
   - component: {fileID: 1329692242}
   m_Layer: 5
-  m_Name: SkillKey_IMG
+  m_Name: PotKey_IMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49047,7 +49047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4dc051a0301cecb4aa1a85036ace2a58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a8b11548ae1ade4ba8602f9191f1807, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -49447,7 +49447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 76a827c0b7b700d4fa9e135b970a64b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e784953b4d9a9aa4494f0fcd8412abd0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -57665,6 +57665,7 @@ GameObject:
   - component: {fileID: 1699711883}
   - component: {fileID: 1699711881}
   - component: {fileID: 1699711882}
+  - component: {fileID: 1699711885}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -57745,6 +57746,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1699711885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699711880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f261ade28232244a304e50961d77e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1704991269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70252,7 +70265,7 @@ GameObject:
   - component: {fileID: 2052047684}
   - component: {fileID: 2052047683}
   m_Layer: 5
-  m_Name: Skill_KeyCode
+  m_Name: Pot_KeyCode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
