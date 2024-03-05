@@ -1,9 +1,7 @@
 # DEMO RPG Project in Unity - Sword of Pawrok - Work In Progress!!
 
-RPG made with Unity
-
 <div align="left">
-  <img src="sop_logo2.png" width="474" height="301" alt="Centered Image">
+  <img src="sop_logo_mini.png" width="400" height="228" alt="Game_logo">
 </div>
 
 # Gameplay
