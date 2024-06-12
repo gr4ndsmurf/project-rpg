@@ -8,7 +8,7 @@ public class PlayerMotor : MonoBehaviour
 {
     Transform target;
     NavMeshAgent agent;
-    [SerializeField] private ParticleSystem clickEffect;
+    [SerializeField] private GameObject clickEffect;
 
     private void Start()
     {
@@ -27,9 +27,12 @@ public class PlayerMotor : MonoBehaviour
     public void MoveToPoint(Vector3 point)
     {
         agent.SetDestination(point);
+
         if (clickEffect != null)
         {
-            Instantiate(clickEffect, point += new Vector3(0, 0.1f, 0), clickEffect.transform.rotation);
+            clickEffect.transform.position = point += new Vector3(0, 0.1f, 0);
+            clickEffect.GetComponent<ParticleSystem>().Play();
+
         }
     }
 

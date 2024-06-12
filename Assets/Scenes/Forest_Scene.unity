@@ -44271,6 +44271,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288719418}
   m_CullTransparentMesh: 1
+--- !u!1 &1289516797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5511964332357501681, guid: e729f7a866e92d647aa79e08bfa3c564,
+    type: 3}
+  m_PrefabInstance: {fileID: 2125611819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1290826199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72428,6 +72434,74 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 887678217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2125611819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5511964332357501681, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_Name
+      value: ClickEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.17529
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.006567
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589126141849131739, guid: e729f7a866e92d647aa79e08bfa3c564,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e729f7a866e92d647aa79e08bfa3c564, type: 3}
 --- !u!1 &2126506990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5790650318199090587, guid: 37aa8537df62c85458b8ac28857c96bd,
@@ -73633,8 +73707,7 @@ PrefabInstance:
         type: 3}
       propertyPath: clickEffect
       value: 
-      objectReference: {fileID: 440217052206887019, guid: e729f7a866e92d647aa79e08bfa3c564,
-        type: 3}
+      objectReference: {fileID: 1289516797}
     - target: {fileID: 9200532866735563656, guid: 37aa8537df62c85458b8ac28857c96bd,
         type: 3}
       propertyPath: cam
@@ -73814,3 +73887,4 @@ SceneRoots:
   - {fileID: 5998341001566098043}
   - {fileID: 2932964004342225812}
   - {fileID: 796798337}
+  - {fileID: 2125611819}
